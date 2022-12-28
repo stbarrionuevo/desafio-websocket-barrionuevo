@@ -1,0 +1,28 @@
+<div class="container" id="chat">
+  <br>
+  <% if(products.length === 0) { %>
+    <h2 style="color: #e04;">No Products Available ❌</h2>
+  <% } else { %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Foto URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% products.forEach((product, index) => { %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= product.name %></td>
+          <td><%= product.price %>$</td>
+          <td><img style="height:2em;" src= <%= product.URL %>></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  <% } %>
+  </table>
+</div>
+

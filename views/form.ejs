@@ -1,0 +1,41 @@
+<%- include('./header.ejs') %>
+<body>
+  <div class="container">
+    <h1><strong>Ingrese un Producto</strong> </h1>
+    <form action="/products" method="post">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name: </label>
+        <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price: </label>
+        <input type="number" class="form-control" id="price" name="price" aria-describedby="price">
+      </div>
+      <div class="mb-3">
+        <label for="URL" class="form-label">Foto URL: </label>
+        <input type="text" class="form-control" id="URL" name="URL" aria-describedby="URL">
+      </div>
+      <button type="submit" class="btn btn-primary" style="background-color: #0e1;" >Submit</button>
+    </form>
+  </div>
+
+  <div class="container" >
+    <h1><strong>Chat online</strong> </h1>
+    <form action="/products" method="post" id="messageForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email: </label>
+        <input type="text" class="form-control" id="email" name="email" aria-describedby="email">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your message: </label>
+        <input type="text" class="form-control" id="message" name="message" aria-describedby="message">
+      </div>
+     
+      <button type="submit" class="btn btn-primary" onclick="addMessage(messageForm)" style="background-color: #099;" >Submit</button>
+    </form>
+  </div>
+
+  <%- include('./table.ejs') %>
+  <%- include('./chatForm.ejs') %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>

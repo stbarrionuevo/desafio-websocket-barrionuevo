@@ -1,0 +1,15 @@
+<div class="container" >
+    <h1><strong>Chat online</strong> </h1>
+    <form action="/products" method="post" id="messageForm">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email: </label>
+        <input type="text" class="form-control" id="email" name="email" aria-describedby="email">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your message: </label>
+        <input type="text" class="form-control" id="message" name="message" aria-describedby="message">
+      </div>
+     
+      <button type="submit" class="btn btn-primary" onclick="addMessage(messageForm)" style="background-color: #099;" >Submit</button>
+    </form>
+  </div>
